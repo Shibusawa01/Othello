@@ -2,8 +2,8 @@ let currentColor = 'black'
 
 
 window.onload = () => {
-  const rows = Array.from({ length: 8 }, (v,k) => k + 1);
-  const columns = Array.from({ length: 8 }, (v,k) => k + 1);
+  const rows = Array.from({ length: 8 }, (v, k) => k + 1);
+  const columns = Array.from({ length: 8 }, (v, k) => k + 1);
   for (row of rows) {
     for (column of columns) {
       document.querySelector('.container').insertAdjacentHTML(
@@ -20,7 +20,7 @@ window.onload = () => {
       const row = Number(e.target.dataset.row)
       const column = Number(e.target.dataset.column)
 
-      
+
 
       const functionList = [
         getUpLine,
