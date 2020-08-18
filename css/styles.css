@@ -1,10 +1,17 @@
 
 body{
   text-align:center;
+  background-color: rgb(226, 241, 255);
 }
 
 h1{
   font-size:40px;
+}
+
+.title{
+  background-color: azure;
+  width:673px;
+  margin: auto;
 }
 
 
