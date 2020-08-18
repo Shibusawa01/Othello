@@ -6,13 +6,44 @@ window.onload = () => {
   const columns = Array.from({ length: 8 }, (v, k) => k + 1);
   for (row of rows) {
     for (column of columns) {
-      document.querySelector('.container').insertAdjacentHTML(
-        'beforeend',
-        `<div class="item"  data-row="${row}" data-column="${column}"></div>`
-      )
+      /* 初期石配置 */
+      if (row == 4) {
+        if (column == 4) {
+          document.querySelector('.container').insertAdjacentHTML(
+            'beforeend',
+            `<div class="item"  data-row="4" data-column="4"data-color="black"></div>`)
+        } else if (column == 5) {
+          document.querySelector('.container').insertAdjacentHTML(
+            'beforeend',
+            `<div class="item"  data-row="4" data-column="5"data-color="white"></div>`)
+        } else {
+          document.querySelector('.container').insertAdjacentHTML(
+            'beforeend',
+            `<div class="item"  data-row="${row}" data-column="${column}"></div>`)
+        }
+
+      } else if (row == 5) {
+        if (column == 4) {
+          document.querySelector('.container').insertAdjacentHTML(
+            'beforeend',
+            `<div class="item"  data-row="5" data-column="4"data-color="white"></div>`)
+        } else if (column == 5) {
+          document.querySelector('.container').insertAdjacentHTML(
+            'beforeend',
+            `<div class="item"  data-row="5" data-column="5"data-color="black"></div>`)
+        } else {
+          document.querySelector('.container').insertAdjacentHTML(
+            'beforeend',
+            `<div class="item"  data-row="${row}" data-column="${column}"></div>`)
+        }
+      } else {
+        document.querySelector('.container').insertAdjacentHTML(
+          'beforeend',
+          `<div class="item"  data-row="${row}" data-column="${column}"></div>`)
+      }
     }
   }
-
+  /* クリックした時に石を置く */
   Array.from(document.getElementsByClassName('item')).forEach(element => {
     element.addEventListener('click', (e) => {
       e.target.dataset.color = currentColor
@@ -21,7 +52,7 @@ window.onload = () => {
       const column = Number(e.target.dataset.column)
 
 
-
+      /* 挟んだ時ひっくり返す */
       const functionList = [
         getUpLine,
         getRightLine,
@@ -51,7 +82,7 @@ window.onload = () => {
     })
   })
 }
-
+/*  */
 const enemyColor = () => {
   return (currentColor == 'black') ? 'white' : 'black'
 }
