@@ -4,10 +4,11 @@
   body{
     text-align:center;
     background-color: rgb(226, 241, 255);
+    font-family: ほのかアンティーク丸;
   }
   
   h1{
-    font-size:40px;
+    font-size:50px;
   }
   
   .title{

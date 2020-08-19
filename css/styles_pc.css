@@ -5,6 +5,7 @@
   body{
     text-align:center;
     background-color: rgb(226, 241, 255);
+    font-family: ほのかアンティーク丸,sans-serif;
   }
   
   h1{
@@ -15,6 +16,10 @@
     background-color: azure;
     width:673px;
     margin: auto;
+  }
+
+  .title h1{
+    font-size:50px;
   }
   
   
