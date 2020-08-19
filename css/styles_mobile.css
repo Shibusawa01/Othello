@@ -39,6 +39,7 @@
   [data-color="white"],
   [data-color="black"]{
     pointer-events: none;
+    cursor:default;
   }
   
   [data-color="white"]::after,

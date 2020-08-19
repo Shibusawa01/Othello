@@ -31,16 +31,17 @@
     grid-gap:3px;
     background-color:black;
     padding:12px;
-    cursor:pointer;
   }
   
   .item{
     background-color: green;
+    cursor:pointer;
   }
 
   [data-color="white"],
   [data-color="black"]{
     pointer-events: none;
+    cursor: default;
   }
 
   [data-color="white"]::after,
