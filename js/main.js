@@ -14,7 +14,7 @@ window.onload = () => {
         } else if (column == 5) {
           document.querySelector('.container').insertAdjacentHTML(
             'beforeend',
-            `<div class="item"  data-row="4" data-column="5}"data-color="white"></div>`)
+            `<div class="item"  data-row="4" data-column="5"data-color="white"></div>`)
         } else {
           document.querySelector('.container').insertAdjacentHTML(
             'beforeend',
