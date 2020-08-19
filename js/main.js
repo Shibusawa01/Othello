@@ -1,10 +1,10 @@
 let currentColor = 'black'
 let alertColor = '黒'
 let alertColorReverse = '白'
- 
+
 window.onload = () => {
-  const rows = [1,2,3,4,5,6,7,8];
-  const columns = [1,2,3,4,5,6,7,8];
+  const rows = [1, 2, 3, 4, 5, 6, 7, 8];
+  const columns = [1, 2, 3, 4, 5, 6, 7, 8];
   for (row of rows) {
     for (column of columns) {
       /* 初期石配置 */
@@ -82,10 +82,10 @@ window.onload = () => {
       currentColor = enemyColor()
       alertColor = enemyalertColor()
       alertColorReverse = enemyalertColorReverse()
-      
+
       let turn = document.getElementById("turn");
-      turn.innerHTML = "現在"+enemyalertColorReverse()+"の番です";
-      alert('次は'+alertColor+'の番です');
+      turn.innerHTML = "現在" + enemyalertColorReverse() + "の番です";
+      alert('次は' + alertColor + 'の番です');
     })
   })
 }
@@ -106,7 +106,7 @@ const enemyalertColor = () => {
   }
 }
 
-const enemyalertColorReverse = () =>{
+const enemyalertColorReverse = () => {
   if (alertColorReverse == '白') {
     return '黒';
   } else {
