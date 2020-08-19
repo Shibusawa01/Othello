@@ -14,7 +14,7 @@ window.onload = () => {
         } else if (column == 5) {
           document.querySelector('.container').insertAdjacentHTML(
             'beforeend',
-            `<div class="item"  data-row="4" data-column="5"data-color="white"></div>`)
+            `<div class="item"  data-row="4" data-column="5}"data-color="white"></div>`)
         } else {
           document.querySelector('.container').insertAdjacentHTML(
             'beforeend',
@@ -64,10 +64,10 @@ window.onload = () => {
       ]
 
       for (const fn of functionList) {
-        //全方向
+        //マスを全部取る
         squares = fn(row, column)
 
-        //ひっくり返したいマス目
+        //ひっくり返したいマス目の配列
         squaresToBeReversed = getTarget(squares)
 
         //ひっくり返す
