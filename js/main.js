@@ -1,5 +1,6 @@
 let currentColor = 'black'
-
+let alertColor = '黒'
+ 
 window.onload = () => {
   const rows = [1,2,3,4,5,6,7,8];
   const columns = [1,2,3,4,5,6,7,8];
@@ -78,7 +79,8 @@ window.onload = () => {
 
 
       currentColor = enemyColor()
-      alert('次は'+currentColor+'の番です');
+      alertColor = enemyalertcolor()
+      alert('次は'+alertColor+'の番です');
     })
   })
 }
@@ -88,6 +90,14 @@ const enemyColor = () => {
     return 'white';
   } else {
     return 'black';
+  }
+}
+
+const enemyalertcolor = () => {
+  if (alertColor == '黒') {
+    return '白';
+  } else {
+    return '黒';
   }
 }
 
