@@ -37,7 +37,12 @@
   .item{
     background-color: green;
   }
-  
+
+  [data-color="white"],
+  [data-color="black"]{
+    pointer-events: none;
+  }
+
   [data-color="white"]::after,
   [data-color="black"]::after
   {
@@ -46,13 +51,17 @@
     background-color: white;
     height:100%;
     border-radius:50%;
+    cursor:default;
+    pointer-events: none;
   }
   
   [data-color="white"]::after{
+    pointer-events: none;
     background-color: white;
   }
   
   [data-color="black"]::after{
+    pointer-events: none;
     background-color: black;
   }
 
