@@ -78,6 +78,7 @@ window.onload = () => {
 
 
       currentColor = enemyColor()
+      alert('次は'+currentColor+'の番です');
     })
   })
 }
