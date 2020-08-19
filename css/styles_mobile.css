@@ -29,6 +29,7 @@
     grid-gap:3px;
     background-color:black;
     padding:12px;
+    cursor: pointer;
   }
   
   .item{

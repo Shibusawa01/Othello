@@ -26,11 +26,12 @@
   
   .container{
     display:grid;
-    grid-template-rows: repeat(8,80px);
-    grid-template-columns: repeat(8,80px);
+    grid-template-rows: repeat(8,60px);
+    grid-template-columns: repeat(8,60px);
     grid-gap:3px;
     background-color:black;
     padding:12px;
+    cursor:pointer;
   }
   
   .item{

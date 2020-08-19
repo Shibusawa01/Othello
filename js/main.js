@@ -52,7 +52,7 @@ window.onload = () => {
       const column = Number(e.target.dataset.column)
 
 
-      /* 挟んだ時ひっくり返す */
+      /* 挟んだ時ひっくり返す変数定義 */
       const functionList = [
         getUpLine,
         getRightLine,
