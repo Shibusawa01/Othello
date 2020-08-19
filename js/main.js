@@ -193,3 +193,8 @@ const getTarget = (squares) => {
   }
   return []
 }
+
+const reload =document.getElementById('reload');
+reload.addEventListener('click',function(){
+  window.location.reload();
+});
