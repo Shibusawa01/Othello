@@ -1,5 +1,4 @@
 let currentColor = 'black'
-let alertColor = '黒'
 let alertColorReverse = '白'
 let i=0;
 window.onload = () => {
@@ -80,7 +79,6 @@ window.onload = () => {
 
 
       currentColor = enemyColor()
-      alertColor = enemyalertColor()
       alertColorReverse = enemyalertColorReverse()
 
       let turn = document.getElementById("turn");
@@ -104,13 +102,6 @@ const enemyColor = () => {
   }
 }
 
-const enemyalertColor = () => {
-  if (alertColor == '黒') {
-    return '白';
-  } else {
-    return '黒';
-  }
-}
 
 const enemyalertColorReverse = () => {
   if (alertColorReverse == '白') {
