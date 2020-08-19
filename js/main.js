@@ -87,7 +87,6 @@ window.onload = () => {
       
       i+=1;
       if(i<60){
-      alert('次は'+alertColor+'の番です');
         turn.innerHTML = "現在" + enemyalertColorReverse() + "の番です";
       }else{
         alert('終了！');
