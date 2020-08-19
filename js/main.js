@@ -1,9 +1,8 @@
 let currentColor = 'black'
 
-
 window.onload = () => {
-  const rows = Array.from({ length: 8 }, (v, k) => k + 1);
-  const columns = Array.from({ length: 8 }, (v, k) => k + 1);
+  const rows = [1,2,3,4,5,6,7,8];
+  const columns = [1,2,3,4,5,6,7,8];
   for (row of rows) {
     for (column of columns) {
       /* 初期石配置 */
@@ -68,7 +67,7 @@ window.onload = () => {
         //全方向
         squares = fn(row, column)
 
-        //ひっくり返したい
+        //ひっくり返したいマス目
         squaresToBeReversed = getTarget(squares)
 
         //ひっくり返す
@@ -82,13 +81,17 @@ window.onload = () => {
     })
   })
 }
-/*  */
+/* currentColorの色の反対の色を設定する */
 const enemyColor = () => {
-  return (currentColor == 'black') ? 'white' : 'black'
+  if (currentColor == 'black') {
+    return 'white';
+  } else {
+    return 'black';
+  }
 }
 
 
-
+/* 下に置いたとき */
 const getUpLine = (row, column) => {
   result = []
   while (true) {
@@ -99,6 +102,7 @@ const getUpLine = (row, column) => {
   return result
 }
 
+/* 上に置いたとき */
 const getDownLine = (row, column) => {
   result = []
   while (true) {
@@ -110,7 +114,7 @@ const getDownLine = (row, column) => {
 }
 
 
-
+/* 左に置いたとき */
 const getRightLine = (row, column) => {
   result = []
   while (true) {
@@ -121,6 +125,7 @@ const getRightLine = (row, column) => {
   return result
 }
 
+/* 右に置いたとき */
 const getLeftLine = (row, column) => {
   result = []
   while (true) {
@@ -131,6 +136,7 @@ const getLeftLine = (row, column) => {
   return result
 }
 
+/* 左下に置いたとき */
 const getUpRightLine = (row, column) => {
   result = []
   while (true) {
@@ -140,7 +146,7 @@ const getUpRightLine = (row, column) => {
   }
   return result
 }
-
+/* 左上に置いたとき */
 const getDownRightLine = (row, column) => {
   result = []
   while (true) {
@@ -150,7 +156,7 @@ const getDownRightLine = (row, column) => {
   }
   return result
 }
-
+/* 右下に置いたとき */
 const getUpLeftLine = (row, column) => {
   result = []
   while (true) {
@@ -160,7 +166,7 @@ const getUpLeftLine = (row, column) => {
   }
   return result
 }
-
+/* 右上に置いたとき */
 const getDownLeftLine = (row, column) => {
   result = []
   while (true) {
@@ -194,7 +200,7 @@ const getTarget = (squares) => {
   return []
 }
 
-const reload =document.getElementById('reload');
-reload.addEventListener('click',function(){
+const reload = document.getElementById('reload');
+reload.addEventListener('click', function () {
   window.location.reload();
 });
