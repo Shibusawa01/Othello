@@ -1,5 +1,6 @@
 let currentColor = 'black'
 let alertColor = '黒'
+let alertColorReverse = '白'
  
 window.onload = () => {
   const rows = [1,2,3,4,5,6,7,8];
@@ -79,7 +80,11 @@ window.onload = () => {
 
 
       currentColor = enemyColor()
-      alertColor = enemyalertcolor()
+      alertColor = enemyalertColor()
+      alertColorReverse = enemyalertColorReverse()
+      
+      let turn = document.getElementById("turn");
+      turn.innerHTML = "現在"+enemyalertColorReverse()+"の番です";
       alert('次は'+alertColor+'の番です');
     })
   })
@@ -93,11 +98,19 @@ const enemyColor = () => {
   }
 }
 
-const enemyalertcolor = () => {
+const enemyalertColor = () => {
   if (alertColor == '黒') {
     return '白';
   } else {
     return '黒';
+  }
+}
+
+const enemyalertColorReverse = () =>{
+  if (alertColorReverse == '白') {
+    return '黒';
+  } else {
+    return '白';
   }
 }
 
