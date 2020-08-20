@@ -83,13 +83,13 @@ window.onload = () => {
 
       let turn = document.getElementById("turn");
       
+
       i+=1;
       if(i<60){
         turn.innerHTML = "現在" + enemyalertColorReverse() + "の番です";
       }else{
         alert('終了！');
       }
-      
     })
   })
 }
