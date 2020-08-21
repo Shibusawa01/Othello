@@ -11,7 +11,7 @@
   h1{
     font-size:40px;
   }
-  
+
   .title{
     background-color: azure;
     width:500px;
@@ -75,6 +75,16 @@
     width:200px;
     height:50px;
     font-size:30px;
+  }
+
+  #ws{
+    display: inline-block; _display: inline;
+    margin:0 auto;
+  }
+
+  #bs{
+    display: inline-block; _display: inline;
+    margin:0 auto;
   }
 
 }

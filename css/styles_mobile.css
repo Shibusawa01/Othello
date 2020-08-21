@@ -66,4 +66,14 @@
     background-color: black;
   }
 
+  #ws{
+    display: inline-block; _display: inline;
+    margin:0 auto;
+  }
+
+  #bs{
+    display: inline-block; _display: inline;
+    margin:0 auto;
+  }
+
 }

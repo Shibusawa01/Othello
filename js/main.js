@@ -1,6 +1,6 @@
-let currentColor = 'black'
-let alertColorReverse = '白'
-let i=0;
+let currentColor = 'black';
+let alertColorReverse = '白';
+let i = 0;
 window.onload = () => {
   const rows = [1, 2, 3, 4, 5, 6, 7, 8];
   const columns = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -82,13 +82,27 @@ window.onload = () => {
       alertColorReverse = enemyalertColorReverse()
 
       let turn = document.getElementById("turn");
-      
 
-      i+=1;
-      if(i<60){
+      /* 石の数を数える */
+      const whitestone = document.querySelectorAll('[data-color="white"]');
+      const blackstone = document.querySelectorAll('[data-color="black"]');
+      const win = document.getElementById("win");;
+
+      ws.innerHTML = "白:" + whitestone.length + "個";
+      bs.innerHTML = "黒:" + blackstone.length + "個";
+
+      i += 1;
+      if (i < 60) {
         turn.innerHTML = "現在" + enemyalertColorReverse() + "の番です";
-      }else{
+      } else {
         alert('終了！');
+        if (whitestone.length < blackstone.length) {
+          win.innerHTML = "黒の勝利です！";
+          alert('黒の勝利です！');
+        } else {
+          win.innerHTML = "白の勝利です！";
+          alert('白の勝利です！');
+        }
       }
     })
   })
