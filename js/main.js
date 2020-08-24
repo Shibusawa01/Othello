@@ -99,9 +99,12 @@ window.onload = () => {
         if (whitestone.length < blackstone.length) {
           win.innerHTML = "黒の勝利です！";
           alert('黒の勝利です！');
-        } else {
+        } else if(whitestone.length > blackstone.length) {
           win.innerHTML = "白の勝利です！";
           alert('白の勝利です！');
+        }else{
+          win.innerHTML = "引き分けです";
+          alert('引き分けです');
         }
       }
     })
