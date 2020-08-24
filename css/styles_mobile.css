@@ -57,12 +57,10 @@
   }
   
   [data-color="white"]::after{
-    pointer-events: none;
     background-color: white;
   }
   
   [data-color="black"]::after{
-    pointer-events: none;
     background-color: black;
   }
 
