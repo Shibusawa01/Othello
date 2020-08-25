@@ -1,6 +1,6 @@
 let currentColor = 'black';
 let alertColorReverse = '白';
-let i = 0;
+
 window.onload = () => {
   const rows = [1, 2, 3, 4, 5, 6, 7, 8];
   const columns = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -52,7 +52,7 @@ window.onload = () => {
       const column = Number(e.target.dataset.column)
 
 
-      /* 挟んだ時ひっくり返す変数定義 */
+      /* 挟んだ時ひっくり返す関数定義 */
       const functionList = [
         getUpLine,
         getRightLine,
@@ -86,15 +86,15 @@ window.onload = () => {
       /* 石の数を数える */
       const whitestone = document.querySelectorAll('[data-color="white"]');
       const blackstone = document.querySelectorAll('[data-color="black"]');
-      const win = document.getElementById("win");;
+      const win = document.getElementById("win");
 
       ws.innerHTML = "白:" + whitestone.length + "個";
       bs.innerHTML = "黒:" + blackstone.length + "個";
-
-      i += 1;
-      if (i < 60) {
+      let sum = 0;
+      sum = (whitestone.length + blackstone.length);
+      if (sum < 64) {
         turn.innerHTML = "現在" + enemyalertColorReverse() + "の番です";
-      } else {
+      } else if(sum === 64) {
         alert('終了！');
         if (whitestone.length < blackstone.length) {
           win.innerHTML = "黒の勝利です！";
@@ -106,6 +106,15 @@ window.onload = () => {
           win.innerHTML = "引き分けです";
           alert('引き分けです');
         }
+      }
+      if(whitestone.length == 0){
+        alert('終了！');
+        alert('白のコマが0になりました\n'+'黒の勝利です！');
+        win.innerHTML = "黒の勝利です！";
+      }else if(blackstone.length == 0){
+        alert('終了！');
+        alert('黒のコマが0になりました\n'+'黒の勝利です！');
+        win.innerHTML = "白の勝利です！";
       }
     })
   })
@@ -131,7 +140,7 @@ const enemyalertColorReverse = () => {
 
 /* 下に置いたとき */
 const getUpLine = (row, column) => {
-  result = []
+  const result = []
   while (true) {
     row -= 1
     if (!checkInBoard(row, column)) { break }
@@ -226,8 +235,9 @@ const getTarget = (squares) => {
   result = []
   for (const square of squares) {
     const color = square.dataset.color
-
+    //colorがenemyColorだとひっくり返す対象になる
     if (color == enemyColor()) {
+
       result.push(square)
     } else if (color == currentColor) {
       return result
