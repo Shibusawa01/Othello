@@ -6,16 +6,27 @@
     text-align:center;
     background-color: rgb(226, 241, 255);
     font-family: ほのかアンティーク丸,sans-serif;
+    width: 100vw;
+    height: 100vh;
+
   }
+  	
   
   h1{
     font-size:40px;
+    margin: 0;
+  }
+
+  h2{
+    margin: 0;
+    padding:5px;
   }
 
   .title{
     background-color: azure;
     width:500px;
     margin: auto;
+    display: inline-block;
   }
 
   .title h1{
@@ -70,9 +81,10 @@
   }
 
   #reload{
-    width:200px;
-    height:50px;
-    font-size:30px;
+    width:50px;
+    height:25px;
+    font-size:15px;
+    display: inline-block;
   }
 
   #ws{
@@ -83,6 +95,11 @@
   #bs{
     display: inline-block;
     margin:0 auto;
+  }
+
+  p{
+    margin:0;
+    display: inline-block;
   }
 
 }

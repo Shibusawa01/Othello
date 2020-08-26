@@ -111,10 +111,18 @@ window.onload = () => {
         alert('終了！');
         alert('白のコマが0になりました\n'+'黒の勝利です！');
         win.innerHTML = "黒の勝利です！";
+      const result = confirm('試合をリセットしますか？');
+      if( result ) {
+        location.reload();
+    }
       }else if(blackstone.length == 0){
         alert('終了！');
         alert('黒のコマが0になりました\n'+'黒の勝利です！');
         win.innerHTML = "白の勝利です！";
+        const result = confirm('試合をリセットしますか？');
+      if( result ) {
+        location.reload();
+       }
       }
     })
   })

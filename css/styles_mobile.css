@@ -6,6 +6,9 @@
     background-color: rgb(226, 241, 255);
     font-family: ほのかアンティーク丸;
   }
+
+  	
+  html, body { height:100%; margin:0; }
   
   h1{
     font-size:25px;
@@ -72,6 +75,11 @@
   #bs{
     display: inline-block;
     margin:0 auto;
+  }
+
+  p{
+    display: inline-block;
+    margin:0;
   }
 
 }
