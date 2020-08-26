@@ -97,6 +97,7 @@ window.onload = () => {
       } else if(sum === 64) {
         alert('終了！');
         if (whitestone.length < blackstone.length) {
+          turn.innerHTML = "";
           win.innerHTML = "黒の勝利です！";
           alert('黒の勝利です！');
           const result = confirm('試合をリセットしますか？');
@@ -104,6 +105,7 @@ window.onload = () => {
           location.reload();
           }
         } else if(whitestone.length > blackstone.length) {
+          turn.innerHTML = "";
           win.innerHTML = "白の勝利です！";
           alert('白の勝利です！');
           const result = confirm('試合をリセットしますか？');
@@ -111,6 +113,7 @@ window.onload = () => {
           location.reload();
           }
         }else{
+          turn.innerHTML = "";
           win.innerHTML = "引き分けです";
           alert('引き分けです');
           const result = confirm('試合をリセットしますか？');
@@ -120,6 +123,7 @@ window.onload = () => {
         }
       }
       if(whitestone.length == 0){
+        turn.innerHTML = "";
         alert('終了！');
         alert('白のコマが0になりました\n'+'黒の勝利です！');
         win.innerHTML = "黒の勝利です！";
@@ -128,6 +132,7 @@ window.onload = () => {
         location.reload();
     }
       }else if(blackstone.length == 0){
+        turn.innerHTML = "";
         alert('終了！');
         alert('黒のコマが0になりました\n'+'白の勝利です！');
         win.innerHTML = "白の勝利です！";
