@@ -99,12 +99,24 @@ window.onload = () => {
         if (whitestone.length < blackstone.length) {
           win.innerHTML = "黒の勝利です！";
           alert('黒の勝利です！');
+          const result = confirm('試合をリセットしますか？');
+          if( result ) {
+          location.reload();
+          }
         } else if(whitestone.length > blackstone.length) {
           win.innerHTML = "白の勝利です！";
           alert('白の勝利です！');
+          const result = confirm('試合をリセットしますか？');
+          if( result ) {
+          location.reload();
+          }
         }else{
           win.innerHTML = "引き分けです";
           alert('引き分けです');
+          const result = confirm('試合をリセットしますか？');
+          if( result ) {
+          location.reload();
+          }
         }
       }
       if(whitestone.length == 0){
