@@ -129,7 +129,7 @@ window.onload = () => {
     }
       }else if(blackstone.length == 0){
         alert('終了！');
-        alert('黒のコマが0になりました\n'+'黒の勝利です！');
+        alert('黒のコマが0になりました\n'+'白の勝利です！');
         win.innerHTML = "白の勝利です！";
         const result = confirm('試合をリセットしますか？');
       if( result ) {
