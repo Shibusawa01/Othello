@@ -47,7 +47,6 @@ window.onload = () => {
   Array.from(document.getElementsByClassName('item')).forEach(element => {
     element.addEventListener('click', (e) => {
       e.target.dataset.color = currentColor
-
       const row = Number(e.target.dataset.row)
       const column = Number(e.target.dataset.column)
 
@@ -70,6 +69,11 @@ window.onload = () => {
 
         //ひっくり返したいマス目の配列
         squaresToBeReversed = getTarget(squares)
+
+        if(squaresToBeReversed == []){
+          e.target.dataset.color = 'none'
+          alert('ここに置くことは出来ません');
+        }
 
         //ひっくり返す
         squaresToBeReversed.forEach(el => { el.dataset.color = currentColor })
@@ -100,24 +104,24 @@ window.onload = () => {
           turn.innerHTML = "";
           win.innerHTML = "黒の勝利です！";
           alert('黒の勝利です！');
-          const result = confirm('試合をリセットしますか？');
-          if( result ) {
+          const resultn = confirm('試合をリセットしますか？');
+          if( resultn ) {
           location.reload();
           }
         } else if(whitestone.length > blackstone.length) {
           turn.innerHTML = "";
           win.innerHTML = "白の勝利です！";
           alert('白の勝利です！');
-          const result = confirm('試合をリセットしますか？');
-          if( result ) {
+          const resultn = confirm('試合をリセットしますか？');
+          if( resultn ) {
           location.reload();
           }
         }else{
           turn.innerHTML = "";
           win.innerHTML = "引き分けです";
           alert('引き分けです');
-          const result = confirm('試合をリセットしますか？');
-          if( result ) {
+          const resultn = confirm('試合をリセットしますか？');
+          if( resultn ) {
           location.reload();
           }
         }
@@ -127,8 +131,8 @@ window.onload = () => {
         alert('終了！');
         alert('白のコマが0になりました\n'+'黒の勝利です！');
         win.innerHTML = "黒の勝利です！";
-      const result = confirm('試合をリセットしますか？');
-      if( result ) {
+      const resultn = confirm('試合をリセットしますか？');
+      if( resultn ) {
         location.reload();
     }
       }else if(blackstone.length == 0){
@@ -136,8 +140,8 @@ window.onload = () => {
         alert('終了！');
         alert('黒のコマが0になりました\n'+'白の勝利です！');
         win.innerHTML = "白の勝利です！";
-        const result = confirm('試合をリセットしますか？');
-      if( result ) {
+        const resultn = confirm('試合をリセットしますか？');
+      if( resultn ) {
         location.reload();
        }
       }
