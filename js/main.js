@@ -69,14 +69,16 @@ window.onload = () => {
 
         //ひっくり返したいマス目の配列
         squaresToBeReversed = getTarget(squares)
-
-        if(squaresToBeReversed == []){
-          e.target.dataset.color = 'none'
-          alert('ここに置くことは出来ません');
+        if (squaresToBeReversed.length >= 1) {
+          alert('置けます');
+          console.log(squaresToBeReversed.length);
+        } else {
+          console.log(squaresToBeReversed.length);
         }
 
         //ひっくり返す
         squaresToBeReversed.forEach(el => { el.dataset.color = currentColor })
+
 
       }
 
@@ -98,52 +100,52 @@ window.onload = () => {
       sum = (whitestone.length + blackstone.length);
       if (sum < 64) {
         turn.innerHTML = "現在" + enemyalertColorReverse() + "の番です";
-      } else if(sum === 64) {
+      } else if (sum === 64) {
         alert('終了！');
         if (whitestone.length < blackstone.length) {
           turn.innerHTML = "";
           win.innerHTML = "黒の勝利です！";
           alert('黒の勝利です！');
           const resultn = confirm('試合をリセットしますか？');
-          if( resultn ) {
-          location.reload();
+          if (resultn) {
+            location.reload();
           }
-        } else if(whitestone.length > blackstone.length) {
+        } else if (whitestone.length > blackstone.length) {
           turn.innerHTML = "";
           win.innerHTML = "白の勝利です！";
           alert('白の勝利です！');
           const resultn = confirm('試合をリセットしますか？');
-          if( resultn ) {
-          location.reload();
+          if (resultn) {
+            location.reload();
           }
-        }else{
+        } else {
           turn.innerHTML = "";
           win.innerHTML = "引き分けです";
           alert('引き分けです');
           const resultn = confirm('試合をリセットしますか？');
-          if( resultn ) {
-          location.reload();
+          if (resultn) {
+            location.reload();
           }
         }
       }
-      if(whitestone.length == 0){
+      if (whitestone.length == 0) {
         turn.innerHTML = "";
         alert('終了！');
-        alert('白のコマが0になりました\n'+'黒の勝利です！');
+        alert('白のコマが0になりました\n' + '黒の勝利です！');
         win.innerHTML = "黒の勝利です！";
-      const resultn = confirm('試合をリセットしますか？');
-      if( resultn ) {
-        location.reload();
-    }
-      }else if(blackstone.length == 0){
+        const resultn = confirm('試合をリセットしますか？');
+        if (resultn) {
+          location.reload();
+        }
+      } else if (blackstone.length == 0) {
         turn.innerHTML = "";
         alert('終了！');
-        alert('黒のコマが0になりました\n'+'白の勝利です！');
+        alert('黒のコマが0になりました\n' + '白の勝利です！');
         win.innerHTML = "白の勝利です！";
         const resultn = confirm('試合をリセットしますか？');
-      if( resultn ) {
-        location.reload();
-       }
+        if (resultn) {
+          location.reload();
+        }
       }
     })
   })
