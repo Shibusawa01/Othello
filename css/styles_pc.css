@@ -90,6 +90,7 @@
   #ws{
     display: inline-block;
     margin:0 auto;
+    padding-right: 10px;
   }
 
   #bs{
