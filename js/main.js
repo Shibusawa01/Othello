@@ -46,7 +46,6 @@ window.onload = () => {
   /* クリックした時に石を置く */
   Array.from(document.getElementsByClassName('item')).forEach(element => {
     element.addEventListener('click', (e) => {
-      e.target.dataset.color = currentColor
       const row = Number(e.target.dataset.row)
       const column = Number(e.target.dataset.column)
 
@@ -63,6 +62,7 @@ window.onload = () => {
         getDownLeftLine,
       ]
 
+      let reversed = false
       for (const fn of functionList) {
         //マスを全部取る
         squares = fn(row, column)
@@ -72,14 +72,18 @@ window.onload = () => {
         if (squaresToBeReversed.length >= 1) {
           alert('置けます');
           console.log(squaresToBeReversed.length);
+          e.target.dataset.color = currentColor
+          squaresToBeReversed.forEach(el => { el.dataset.color = currentColor })
+          reversed = true
         } else {
           console.log(squaresToBeReversed.length);
         }
 
-        //ひっくり返す
-        squaresToBeReversed.forEach(el => { el.dataset.color = currentColor })
 
 
+      }
+      if (!reversed) {
+        return
       }
 
 
