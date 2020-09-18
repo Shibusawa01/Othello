@@ -46,6 +46,7 @@ window.onload = () => {
   /* クリックした時に石を置く */
   Array.from(document.getElementsByClassName('item')).forEach(element => {
     element.addEventListener('click', (e) => {
+      e.target.dataset.color = currentColor
       const row = Number(e.target.dataset.row)
       const column = Number(e.target.dataset.column)
 
@@ -62,7 +63,6 @@ window.onload = () => {
         getDownLeftLine,
       ]
 
-      let reversed = false
       for (const fn of functionList) {
         //マスを全部取る
         squares = fn(row, column)
@@ -72,18 +72,14 @@ window.onload = () => {
         if (squaresToBeReversed.length >= 1) {
           alert('置けます');
           console.log(squaresToBeReversed.length);
-          e.target.dataset.color = currentColor
-          squaresToBeReversed.forEach(el => { el.dataset.color = currentColor })
-          reversed = true
         } else {
           console.log(squaresToBeReversed.length);
         }
 
+        //ひっくり返す
+        squaresToBeReversed.forEach(el => { el.dataset.color = currentColor })
 
 
-      }
-      if (!reversed) {
-        return
       }
 
 
@@ -110,6 +106,7 @@ window.onload = () => {
           turn.innerHTML = "";
           win.innerHTML = "黒の勝利です！";
           alert('黒の勝利です！');
+          sessionStorage.setItem('sessionblack','1');
           const resultn = confirm('試合をリセットしますか？');
           if (resultn) {
             location.reload();
@@ -118,6 +115,7 @@ window.onload = () => {
           turn.innerHTML = "";
           win.innerHTML = "白の勝利です！";
           alert('白の勝利です！');
+          sessionStorage.setItem('sessionwhite','1');
           const resultn = confirm('試合をリセットしますか？');
           if (resultn) {
             location.reload();
@@ -137,6 +135,7 @@ window.onload = () => {
         alert('終了！');
         alert('白のコマが0になりました\n' + '黒の勝利です！');
         win.innerHTML = "黒の勝利です！";
+        sessionStorage.setItem('sessionblack','1');
         const resultn = confirm('試合をリセットしますか？');
         if (resultn) {
           location.reload();
@@ -146,11 +145,16 @@ window.onload = () => {
         alert('終了！');
         alert('黒のコマが0になりました\n' + '白の勝利です！');
         win.innerHTML = "白の勝利です！";
+        sessionStorage.setItem('sessionwhite','1');
         const resultn = confirm('試合をリセットしますか？');
         if (resultn) {
           location.reload();
         }
       }
+      const datab = sessionStorage.getItem('sessionblack');
+      console.log(datab.length);
+      const dataw = sessionStorage.getItem('sessionwhite');
+      console.log(dataw.length);
     })
   })
 }
