@@ -106,7 +106,6 @@ window.onload = () => {
           turn.innerHTML = "";
           win.innerHTML = "黒の勝利です！";
           alert('黒の勝利です！');
-          sessionStorage.setItem('sessionblack','1');
           const resultn = confirm('試合をリセットしますか？');
           if (resultn) {
             location.reload();
@@ -115,7 +114,6 @@ window.onload = () => {
           turn.innerHTML = "";
           win.innerHTML = "白の勝利です！";
           alert('白の勝利です！');
-          sessionStorage.setItem('sessionwhite','1');
           const resultn = confirm('試合をリセットしますか？');
           if (resultn) {
             location.reload();
@@ -135,7 +133,6 @@ window.onload = () => {
         alert('終了！');
         alert('白のコマが0になりました\n' + '黒の勝利です！');
         win.innerHTML = "黒の勝利です！";
-        sessionStorage.setItem('sessionblack','1');
         const resultn = confirm('試合をリセットしますか？');
         if (resultn) {
           location.reload();
@@ -145,16 +142,11 @@ window.onload = () => {
         alert('終了！');
         alert('黒のコマが0になりました\n' + '白の勝利です！');
         win.innerHTML = "白の勝利です！";
-        sessionStorage.setItem('sessionwhite','1');
         const resultn = confirm('試合をリセットしますか？');
         if (resultn) {
           location.reload();
         }
       }
-      const datab = sessionStorage.getItem('sessionblack');
-      console.log(datab.length);
-      const dataw = sessionStorage.getItem('sessionwhite');
-      console.log(dataw.length);
     })
   })
 }
