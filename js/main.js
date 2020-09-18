@@ -143,6 +143,7 @@ window.onload = () => {
           location.reload();
         }
       } else if (blackstone.length == 0) {
+        document.getElementById('pass').style.visibility = 'hidden';
         turn.innerHTML = "";
         alert('終了！');
         alert('黒のコマが0になりました\n' + '白の勝利です！');
