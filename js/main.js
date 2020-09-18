@@ -75,7 +75,6 @@ window.onload = () => {
           squaresToBeReversed.forEach(el => { el.dataset.color = currentColor })
           reversed = true
         } else {
-          alert('この場所に置くことは出来ません');
           console.log(squaresToBeReversed.length);
         }
 
