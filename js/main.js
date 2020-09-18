@@ -70,12 +70,12 @@ window.onload = () => {
         //ひっくり返したいマス目の配列
         squaresToBeReversed = getTarget(squares)
         if (squaresToBeReversed.length >= 1) {
-          alert('置けます');
           console.log(squaresToBeReversed.length);
           e.target.dataset.color = currentColor
           squaresToBeReversed.forEach(el => { el.dataset.color = currentColor })
           reversed = true
         } else {
+          alert('この場所に置くことは出来ません');
           console.log(squaresToBeReversed.length);
         }
 
