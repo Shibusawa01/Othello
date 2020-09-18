@@ -80,12 +80,13 @@
     background-color: black;
   }
 
-  #reload{
-    width:50px;
-    height:25px;
-    font-size:15px;
-    display: inline-block;
-  }
+#reload
+{
+  position: fixed;
+  bottom: 10px; 
+  right: 10px;
+  padding: 6px 40px;
+}
 
   #ws{
     display: inline-block;
