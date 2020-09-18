@@ -86,6 +86,11 @@
   bottom: 10px; 
   right: 10px;
   padding: 6px 40px;
+  text-decoration: none;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
 }
 
   #ws{
