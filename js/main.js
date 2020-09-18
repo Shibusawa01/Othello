@@ -70,7 +70,6 @@ window.onload = () => {
         //ひっくり返したいマス目の配列
         squaresToBeReversed = getTarget(squares)
         if (squaresToBeReversed.length >= 1) {
-          alert('置けます');
           console.log(squaresToBeReversed.length);
         } else {
           console.log(squaresToBeReversed.length);
@@ -282,4 +281,11 @@ const getTarget = (squares) => {
 const reload = document.getElementById('reload');
 reload.addEventListener('click', function () {
   window.location.reload();
+});
+
+let pass = document.getElementById('pass');
+pass.addEventListener('click', function () {
+  currentColor = enemyColor();
+  alertColorReverse = enemyalertColorReverse();
+  turn.innerHTML = "現在" + enemyalertColorReverse() + "の番です";
 });
