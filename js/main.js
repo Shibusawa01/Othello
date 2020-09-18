@@ -104,6 +104,7 @@ window.onload = () => {
       if (sum < 64) {
         turn.innerHTML = "現在" + enemyalertColorReverse() + "の番です";
       } else if (sum === 64) {
+        document.getElementById('pass').style.visibility = 'hidden';
         alert('終了！');
         if (whitestone.length < blackstone.length) {
           turn.innerHTML = "";
@@ -132,6 +133,7 @@ window.onload = () => {
         }
       }
       if (whitestone.length == 0) {
+        document.getElementById('pass').style.visibility = 'hidden';
         turn.innerHTML = "";
         alert('終了！');
         alert('白のコマが0になりました\n' + '黒の勝利です！');
@@ -292,4 +294,5 @@ pass.addEventListener('click', function () {
   currentColor = enemyColor();
   alertColorReverse = enemyalertColorReverse();
   turn.innerHTML = "現在" + enemyalertColorReverse() + "の番です";
+  alert('パスをしました');
 });
