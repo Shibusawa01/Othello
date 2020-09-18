@@ -110,26 +110,14 @@ window.onload = () => {
           turn.innerHTML = "";
           win.innerHTML = "黒の勝利です！";
           alert('黒の勝利です！');
-          const resultn = confirm('試合をリセットしますか？');
-          if (resultn) {
-            location.reload();
-          }
         } else if (whitestone.length > blackstone.length) {
           turn.innerHTML = "";
           win.innerHTML = "白の勝利です！";
           alert('白の勝利です！');
-          const resultn = confirm('試合をリセットしますか？');
-          if (resultn) {
-            location.reload();
-          }
         } else {
           turn.innerHTML = "";
           win.innerHTML = "引き分けです";
           alert('引き分けです');
-          const resultn = confirm('試合をリセットしますか？');
-          if (resultn) {
-            location.reload();
-          }
         }
       }
       if (whitestone.length == 0) {
@@ -138,20 +126,12 @@ window.onload = () => {
         alert('終了！');
         alert('白のコマが0になりました\n' + '黒の勝利です！');
         win.innerHTML = "黒の勝利です！";
-        const resultn = confirm('試合をリセットしますか？');
-        if (resultn) {
-          location.reload();
-        }
       } else if (blackstone.length == 0) {
         document.getElementById('pass').style.visibility = 'hidden';
         turn.innerHTML = "";
         alert('終了！');
         alert('黒のコマが0になりました\n' + '白の勝利です！');
         win.innerHTML = "白の勝利です！";
-        const resultn = confirm('試合をリセットしますか？');
-        if (resultn) {
-          location.reload();
-        }
       }
     })
   })
