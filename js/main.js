@@ -286,3 +286,10 @@ const reload = document.getElementById('reload');
 reload.addEventListener('click', function () {
   window.location.reload();
 });
+
+let pass = document.getElementById('pass');
+pass.addEventListener('click', function () {
+  currentColor = enemyColor();
+  alertColorReverse = enemyalertColorReverse();
+  turn.innerHTML = "現在" + enemyalertColorReverse() + "の番です";
+});
