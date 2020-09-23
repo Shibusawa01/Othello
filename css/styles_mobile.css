@@ -90,6 +90,7 @@
   }
 
   #pass{
+    font-size: 15px;
     display: inline-block;
     padding: 0.5em 1em;
     text-decoration: none;
@@ -102,10 +103,7 @@
 
   #reload
   {
-    position: fixed;
-    bottom: 10px; 
-    right: 10px;
-    padding: 6px 40px;
+    font-size: 15px;
     text-decoration: none;
     background: #E06666;/*ボタン色*/
     color: #FFF;
