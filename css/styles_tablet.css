@@ -1,0 +1,103 @@
+@media screen and (max-width: 959px) {
+ 
+
+  body{
+    text-align:center;
+    background-color: rgb(226, 241, 255);
+    font-family: ほのかアンティーク丸;
+  }
+
+  	
+  html, body { height:100%; margin:0; }
+  
+  h1{
+    font-size:25px;
+  }
+  
+  .title{
+    background-color: azure;
+    margin: auto;
+  }
+  
+  .title h1{
+    font-size:100px;
+    margin: 0;
+  }  
+  
+  .wrap{
+    display:flex;
+    justify-content:center;
+  }
+  
+  .container{
+    display:grid;
+    grid-template-rows: repeat(8,60px);
+    grid-template-columns: repeat(8,60px);
+    grid-gap:3px;
+    background-color:black;
+    padding:12px;
+    cursor: pointer;
+  }
+  
+  .item{
+    background-color: green;
+  }
+
+  [data-color="white"],
+  [data-color="black"]{
+    pointer-events: none;
+    cursor:default;
+  }
+  
+  [data-color="white"]::after,
+  [data-color="black"]::after
+  {
+    content:'';
+    display:block;
+    background-color: white;
+    height:100%;
+    border-radius:50%;
+    cursor:default;
+  }
+  
+  [data-color="white"]::after{
+    background-color: white;
+  }
+  
+  [data-color="black"]::after{
+    background-color: black;
+  }
+
+  #ws{
+    font-size: 50px;
+    display: inline-block;
+    margin:0 auto;
+    padding-right: 10px;
+  }
+
+  #bs{
+    font-size: 50px;
+    display: inline-block;
+    margin:0 auto;
+  }
+
+  p{
+    display: inline-block;
+    margin:0;
+  }
+
+  #turn{
+    font-size: 60px;
+  }
+
+  #pass{
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  #reload{
+    font-size: 20px;
+    padding: 10px;
+  }
+
+}
