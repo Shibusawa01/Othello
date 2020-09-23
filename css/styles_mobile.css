@@ -1,4 +1,4 @@
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 559px) {
  
 
   body{
@@ -30,8 +30,8 @@
   
   .container{
     display:grid;
-    grid-template-rows: repeat(8,40px);
-    grid-template-columns: repeat(8,40px);
+    grid-template-rows: repeat(8,35px);
+    grid-template-columns: repeat(8,35px);
     grid-gap:3px;
     background-color:black;
     padding:12px;
@@ -68,12 +68,14 @@
   }
 
   #ws{
+    font-size: 30px;
     display: inline-block;
     margin:0 auto;
     padding-right: 10px;
   }
 
   #bs{
+    font-size: 30px;
     display: inline-block;
     margin:0 auto;
   }
@@ -81,6 +83,22 @@
   p{
     display: inline-block;
     margin:0;
+  }
+
+  #turn{
+    font-size: 25px;
+  }
+
+  #pass{
+    font-weight: 600;
+    font-size: 10px;
+    padding: 10px;
+  }
+
+  #reload{
+    font-weight: 600;
+    font-size: 10px;
+    padding: 10px;
   }
 
 }
