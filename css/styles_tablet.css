@@ -91,13 +91,36 @@
   }
 
   #pass{
-    font-size: 20px;
-    padding: 10px;
+    font-size: 25px;
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #668ad8;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #627295;
+    border-radius: 3px;
+    visibility: visible; 
   }
 
-  #reload{
-    font-size: 20px;
-    padding: 10px;
+  #reload
+  {
+    font-size: 25px;
+    position: fixed;
+    bottom: 10px; 
+    right: 10px;
+    padding: 6px 40px;
+    text-decoration: none;
+    background: #E06666;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #ad4e4e;
+    border-radius: 3px;
+  }
+
+  #reload:active{
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    border-bottom: none;/*線を消す*/
   }
 
 }
